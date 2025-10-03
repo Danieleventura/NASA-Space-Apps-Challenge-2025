@@ -1,4 +1,4 @@
-# 🚀 NASA Space Jampa - Aventura Espacial
+# 🚀 NASA Space Jampa 2025
 
 O projeto foi desenvolvido pela Equipe Bellatrix durante o NASA Space Apps Challenge 2025.
 
@@ -20,6 +20,5 @@ O projeto foi desenvolvido pela Equipe Bellatrix durante o NASA Space Apps Chall
 
 - **HTML5**: Estrutura semântica e Canvas para certificado
 - **CSS3**: Animações, gradientes, flexbox/grid
-- **JavaScript**: Lógica do quiz, geração de certificado, localStorage
-- **Google Fonts**: Tipografias Orbitron e Space Mono
+- **JavaScript**: Lógica do quiz, geração de certificado
 "# NASA-Space-Apps-Challenge-2025" 

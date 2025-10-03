@@ -516,7 +516,6 @@ body::before {
 }
 
 .quiz-container::before {
-    content: '🎮';
     position: absolute;
     top: 15px;
     right: 20px;
