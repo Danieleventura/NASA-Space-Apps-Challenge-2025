@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Clima Espacial - NASA Space Jampa 🚀</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="stars"></div>
+
+    <div class="container">
+        <header class="header">
+            <img src="assets/1.png" alt="Decoração Espacial" class="decoration-img decoration-top-left">
+            
+            <div class="creative-title">
+                <div class="title-line">
+                    <span class="letter">C</span>
+                    <span class="letter">L</span>
+                    <span class="letter">I</span>
+                    <span class="letter">M</span>
+                    <span class="letter">A</span>
+                </div>
+                <div class="title-line">
+                    <span class="letter special">E</span>
+                    <span class="letter special">S</span>
+                    <span class="letter special">P</span>
+                    <span class="letter special">A</span>
+                    <span class="letter special">C</span>
+                    <span class="letter special">I</span>
+                    <span class="letter special">A</span>
+                    <span class="letter special">L</span>
+                </div>
+            </div>
+            
+            <img src="assets/2.png" alt="Decoração Espacial" class="decoration-img decoration-top-right">
+        </header>
+
+        <section id="video-section" class="section active">
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video id="space-video" controls width="800" height="450">
+                        <source src="Seeing Earth as Only NASA Can - NASA (480p, h264, youtube).mp4" type="video/mp4">
+                        <p>Seu navegador não suporta vídeo HTML5. Por favor, atualize seu navegador.</p>
+                    </video>
+                </div>
+                <button id="start-quiz-btn" class="btn btn-primary">
+                    🛸 Começar Quiz! 👩‍🚀
+                </button>
+            </div>
+        </section>
+
+        <section id="quiz-section" class="section">
+            <div class="quiz-container">
+                <div class="container-decoration">
+                    <img src="assets/3.png" alt="Decoração Espacial" class="decoration-img decoration-top-left">
+                    <img src="assets/4.png" alt="Decoração Espacial" class="decoration-img decoration-top-right">
+                </div>
+                <h2 class="quiz-title-creative">
+                <span class="quiz-letter"> Quiz Espacial Divertido!</span>
+            </h2>
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress-fill"></div>
+                    </div>
+                    <span id="question-counter">Pergunta 1 de 1</span>
+                </div>
+
+                <div id="quiz-content">
+                    <div class="question-container">
+                        <h3 id="question-text"></h3>
+                        <div id="answers-container" class="answers-grid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="prev-btn" class="btn btn-secondary" disabled>⬅️ Anterior</button>
+                    <button id="next-btn" class="btn btn-primary" disabled>Próxima ➡️</button>
+                    <button id="finish-btn" class="btn btn-success" style="display: none;">Finalizar Quiz ✨</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="result-section" class="section">
+            <div class="result-container">
+                <div class="container-decoration">
+                    <img src="assets/5.png" alt="Decoração Espacial" class="decoration-img decoration-top-left">
+                    <img src="assets/6.png" alt="Decoração Espacial" class="decoration-img decoration-top-right">
+                </div>
+                <div id="result-content"></div>
+                <div class="result-actions">
+                    <button id="download-certificate" class="btn btn-certificate" style="display: none;">
+                        📜 Baixar Certificado
+                    </button>
+                    <button id="restart-quiz" class="btn btn-secondary">
+                        🔄 Refazer Quiz
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <canvas id="certificate-canvas" width="800" height="600" style="display: none;"></canvas>
+    </div>
+
+    <div id="name-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Missão Concluída, Mini Astronauta! 🚀</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Você mandou super bem! Está pronto para conquistar seu Certificado de <strong>Mini Astronauta</strong>! 👩‍🚀✨</p>
+                <div class="input-group">
+                    <label for="user-name">Escreva seu nome de astronauta aqui:</label>
+                    <input type="text" id="user-name" placeholder="Ex: Marcos Pontes" maxlength="50">
+                </div>
+                <div class="modal-actions">
+                    <button id="generate-certificate" class="btn btn-certificate">Criar Certificado 🪐</button>
+                    <button id="cancel-certificate" class="btn btn-secondary">Cancelar ❌</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="info-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="project-info-with-image">
+                    <div class="project-image">
+                        <img src="assets/1.png" alt="Ilustração do Projeto Espacial" class="about-project-img">
+                    </div>
+                    <div class="project-text">
+                        <h4 class="footer-title-creative">
+                            <span class="footer-letter">Sobre o Projeto</span>
+                        </h4>
+                        <p><strong>O Clima Espacial Kids</strong> é um projeto educativo que apresenta o clima espacial
+                            para crianças de forma divertida e interativa.</p>
+                        <p>O projeto foi desenvolvido pela <strong>Equipe Bellatrix</strong> durante o <em>NASA Space
+                                Apps Challenge 2025</em>.</p>
+                        <p><strong>Integrantes da equipe:</strong></p>
+                        <ul>
+                            <li>Camilla</li>
+                            <li>Daniele Ventura Batista</li>
+                            <li>Ially</li>
+                            <li>Lais</li>
+                            <li>Matheus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-title-creative">
+                    <span class="footer-letter">Como Funciona?</span>
+                </h4>
+                <div class="steps">
+                    <div class="step">1️⃣ Assista o vídeo</div>
+                    <div class="step">2️⃣ Responda o quiz</div>
+                    <div class="step">3️⃣ Ganhe seu certificado!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>🚀 Feito com muito ❤️ para pequenos exploradores espaciais! 🌌</p>
+            <div class="footer-emojis">
+                <span>👨‍🚀</span><span>🛸</span><span>🪐</span><span>⭐</span><span>🌙</span><span>🌍</span><span>👩‍🚀</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
