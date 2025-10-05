@@ -294,6 +294,38 @@ body::before {
     100% { background-position: 0% 50%; }
 }
 
+/* Event Logo in Footer */
+.event-logo-container {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.event-logo {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    filter: drop-shadow(0 5px 15px rgba(255, 217, 61, 0.3));
+}
+
+.event-logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 20px rgba(255, 217, 61, 0.5));
+}
+
+@media (max-width: 768px) {
+    .event-logo {
+        max-width: 150px;
+    }
+    
+    .event-logo-container {
+        margin: 15px 0;
+        padding: 10px;
+    }
+}
+
 .quiz-title-creative {
     text-align: center;
     margin: 2rem 0;
@@ -409,6 +441,179 @@ body::before {
     box-shadow: 0 15px 35px rgba(4, 157, 187, 0.3);
 }
 
+/* Floating eBook Button */
+.floating-ebook-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.floating-ebook-btn:hover {
+    transform: translateY(-5px);
+}
+
+.floating-ebook-btn:hover .ebook-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+/* Book Button Design */
+.book-button {
+    position: relative;
+    width: 80px;
+    height: 95px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: bookFloat 3s ease-in-out infinite;
+}
+
+.book-button:hover {
+    transform: scale(1.1);
+    animation-play-state: paused;
+}
+
+.book-spine {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 95px;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    border-radius: 2px 0 0 2px;
+    box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.book-cover {
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 70px;
+    height: 95px;
+    background: 
+        linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.5)),
+        url('assets/logo-sec.png'),
+        linear-gradient(135deg, #3b82f6, #1e40af);
+    background-size: 
+        cover,
+        80%,
+        cover;
+    background-position: 
+        center,
+        center,
+        center;
+    background-repeat: no-repeat;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: #ffffff;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.book-title {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+}
+
+.book-subtitle {
+    font-size: 0.6rem;
+    margin-bottom: 2px;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    background: rgba(255, 217, 61, 0.9);
+    color: #1a1a2e;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.book-action {
+    font-size: 0.6rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-weight: 800;
+}
+
+.book-pages {
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    width: 66px;
+    height: 91px;
+    background: #ffffff;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.book-pages::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 62px;
+    height: 87px;
+    background: #f8f9fa;
+    border-radius: 0 2px 2px 0;
+}
+
+.book-pages::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 58px;
+    height: 83px;
+    background: #f1f3f4;
+    border-radius: 0 1px 1px 0;
+}
+
+/* Tooltip */
+.ebook-tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(26, 26, 46, 0.95);
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 217, 61, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ebook-tooltip::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: rgba(26, 26, 46, 0.95);
+}
+
+@keyframes bookFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-3px) rotate(1deg); }
+    50% { transform: translateY(-5px) rotate(0deg); }
+    75% { transform: translateY(-3px) rotate(-1deg); }
+}
+
 #space-video {
     width: 100%;
     height: auto;
@@ -496,6 +701,95 @@ body::before {
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 15px 35px rgba(251, 191, 36, 0.6);
     animation: none;
+}
+
+/* eBook Button Styles */
+.btn-ebook {
+    background: linear-gradient(45deg, #8b5cf6, #a855f7);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ebook::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-ebook:hover::before {
+    left: 100%;
+}
+
+.btn-ebook:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.6);
+    background: linear-gradient(45deg, #7c3aed, #8b5cf6);
+}
+
+/* eBook Highlight Button (Main Page) */
+.btn-ebook-highlight {
+    background: linear-gradient(45deg, #ff6b9d, #fbbf24, #8b5cf6);
+    background-size: 300% 300%;
+    color: #1a1a2e;
+    font-weight: 800;
+    box-shadow: 0 15px 30px rgba(255, 107, 157, 0.4);
+    position: relative;
+    overflow: hidden;
+    animation: gradientShift 3s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-ebook-highlight::before {
+    content: '✨';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 1.2rem;
+    animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.btn-ebook-highlight::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s;
+}
+
+.btn-ebook-highlight:hover::after {
+    left: 100%;
+}
+
+.btn-ebook-highlight:hover {
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 20px 40px rgba(255, 107, 157, 0.6);
+    animation: gradientShift 1s ease-in-out infinite, glowPulse 1s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 15px 30px rgba(255, 107, 157, 0.4); }
+    50% { box-shadow: 0 15px 30px rgba(255, 107, 157, 0.8); }
+}
+
+@keyframes sparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.7; }
+    50% { transform: scale(1.3) rotate(180deg); opacity: 1; }
 }
 
 .btn:disabled {
@@ -1164,6 +1458,21 @@ body::before {
     box-shadow: 0 4px 15px rgba(51, 51, 51, 0.4);
 }
 
+/* GitHub Icon from local SVG file */
+.social-link.github::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('assets/github-brands-solid-full.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 6px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1); /* Torna o ícone branco */
+}
+
 .social-link.instagram:hover {
     background: rgba(225, 48, 108, 0.3);
     box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
@@ -1744,5 +2053,41 @@ body::before {
     .video-controls .btn {
         width: 100%;
         max-width: 300px;
+    }
+    
+    /* Floating eBook Button Mobile */
+    .floating-ebook-btn {
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    
+    .book-button {
+        width: 65px;
+        height: 80px;
+    }
+    
+    .book-spine {
+        width: 8px;
+        height: 80px;
+    }
+    
+    .book-cover {
+        left: 6px;
+        width: 57px;
+        height: 80px;
+    }
+    
+    .book-pages {
+        left: 8px;
+        width: 55px;
+        height: 76px;
+    }
+    
+    .ebook-tooltip {
+        bottom: 75px;
+        font-size: 0.6rem;
     }
 }
