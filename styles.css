@@ -495,7 +495,7 @@ body::before {
     height: 95px;
     background: 
         linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.5)),
-        url('assets/logo-sec.png'),
+        url('assets/cover.png'),
         linear-gradient(135deg, #3b82f6, #1e40af);
     background-size: 
         cover,
