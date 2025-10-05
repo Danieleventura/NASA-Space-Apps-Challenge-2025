@@ -1450,7 +1450,7 @@ body::before {
     background-position: center;
     margin-right: 6px;
     vertical-align: middle;
-    filter: brightness(0) invert(1); /* Torna o ícone branco */
+    filter: brightness(0) invert(1);
 }
 
 .social-link.github:hover {
@@ -1470,7 +1470,27 @@ body::before {
     background-position: center;
     margin-right: 6px;
     vertical-align: middle;
-    filter: brightness(0) invert(1); /* Torna o ícone branco */
+    filter: brightness(0) invert(1);
+}
+
+.social-link.whatsapp:hover {
+    background: rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* WhatsApp Icon from local SVG file */
+.social-link.whatsapp::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('assets/whatsapp-brands-solid-full.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 6px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1); 
 }
 
 .social-link.instagram:hover {
