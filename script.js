@@ -389,6 +389,32 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Audiobook functionality
+function toggleAudiobook() {
+    const audioContainer = document.getElementById('audio-player-container');
+    const audioPlayer = document.getElementById('audiobook-player');
+    
+    if (audioContainer.classList.contains('show')) {
+        audioContainer.classList.remove('show');
+        audioPlayer.pause();
+    } else {
+        audioContainer.classList.add('show');
+    }
+}
+
+// Close audio player when clicking outside
+document.addEventListener('click', (e) => {
+    const audioContainer = document.getElementById('audio-player-container');
+    const audiobookBtn = document.querySelector('.floating-audiobook-btn');
+    
+    if (audioContainer && audioContainer.classList.contains('show') && 
+        !audioContainer.contains(e.target) && 
+        !audiobookBtn.contains(e.target)) {
+        audioContainer.classList.remove('show');
+        document.getElementById('audiobook-player').pause();
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     init();
 });

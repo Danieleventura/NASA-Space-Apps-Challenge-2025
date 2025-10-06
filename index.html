@@ -55,6 +55,21 @@
 
         <section id="video-section" class="section active">
             <div class="video-container">
+                <!-- Botão Audiobook Flutuante -->
+                <div class="floating-audiobook-btn">
+                    <div class="audiobook-button" onclick="toggleAudiobook()">
+                        <div class="audiobook-speaker"></div>
+                        <div class="audiobook-cover">
+                            <div class="audiobook-title">🎧</div>
+                            <div class="audiobook-subtitle">Audio</div>
+                            <div class="audiobook-action">Ouvir</div>
+                        </div>
+                    </div>
+                    <div class="audiobook-tooltip">
+                        Escute a história em áudio! 🎵🎙️
+                    </div>
+                </div>
+
                 <!-- Botão eBook Flutuante -->
                 <div class="floating-ebook-btn">
                     <a href="assets/ebook-tratorzinho-verde.pdf" download="ebook-tratorzinho-verde.pdf">
@@ -70,6 +85,14 @@
                     <div class="ebook-tooltip">
                         Baixe o material completo do flipbook! ✨📚 
                     </div>
+                </div>
+
+                <!-- Player de Áudio (inicialmente oculto) -->
+                <div id="audio-player-container" class="audio-player-container">
+                    <audio id="audiobook-player" controls>
+                        <source src="assets/tratorzinho-verde-e-o-flare-solar-audiobook.mp3" type="audio/mpeg">
+                        Seu navegador não suporta áudio HTML5.
+                    </audio>
                 </div>
                 
                 <div class="video-wrapper">
@@ -485,7 +508,7 @@
                     <span class="footer-letter">Como Funciona?</span>
                 </h4>
                 <div class="steps">
-                    <div class="step">1️⃣ Assista o vídeo</div>
+                    <div class="step">1️⃣ Leia o história</div>
                     <div class="step">2️⃣ Responda o quiz</div>
                     <div class="step">3️⃣ Ganhe seu certificado!</div>
                 </div>

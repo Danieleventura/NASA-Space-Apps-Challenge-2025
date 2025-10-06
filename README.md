@@ -5,7 +5,7 @@ O projeto foi desenvolvido pela Equipe Bellatrix durante o NASA Space Apps Chall
 ## 🚀 Como Usar
 
 1. Abra o arquivo `index.html` no seu navegador
-2. Assista ao vídeo sobre o espaço
+2. Leia ao livro sobre o espaço
 3. Clique em "Começar Quiz!"
 4. Responda as perguntas sobre o clima espacial
 5. Veja seu resultado final
